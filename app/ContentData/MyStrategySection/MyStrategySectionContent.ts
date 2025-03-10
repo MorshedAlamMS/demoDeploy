@@ -48,17 +48,9 @@ export const myStrategySectionBottomTitle =
 "⏳ Get a high-performing thumbnail today before your competition beats you to it!"
 
 
-// card color customize
-
-export const stepOneCardColor = 
-// Step one color ---You can replace your chosen color
-"#FEE690"
-
-export const stepTwoCardColor = 
-// Step two color ---You can replace your chosen color
-"#D5C9EE"
-
-export const stepThreeCardColor = 
-// Step three color ---You can replace your chosen color
-"#D4E2A7"
+// Card Color Customization
+// --- You can replace the hex color codes below with your preferred colors.
+export const stepOneCardColor = "#FEE690";
+export const stepTwoCardColor = "#D5C9EE";
+export const stepThreeCardColor = "#D4E2A7";
 
