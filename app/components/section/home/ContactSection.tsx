@@ -1,24 +1,6 @@
 import { GetYourThumbnailButton } from "~/components/shared/GetYourThumbnailButton";
 import SectionHeading from "~/components/shared/SectionHeading";
-import { contactMeDescription } from "~/ContentData";
-
-export const Image = ({
-  className,
-  imagePath,
-}: {
-  className?: string;
-  imagePath: string;
-}) => {
-  return (
-    <div className={`w-[22px] md:w-[42px] h-[22px] md:h-[42px] ${className} rounded-full overflow-hidden`}>
-      <img
-        className="w-[22px] md:w-[42px] h-[22px] md:h-[42px]"
-        src={`/contact/${imagePath}`}
-        alt="contact section"
-      />
-    </div>
-  );
-};
+import { contactMeDescription, contactMeImg } from "~/ContentData";
 
 const ContactSection = () => {
   return (
@@ -47,20 +29,23 @@ const ContactSection = () => {
         {/* image divs */}
         <div className="absolute -top-3 md:top-[4%] -rotate-3 md:-rotate-0 left-0 w-full">
           <div className="flex justify-between w-[70%] md:w-[80%] mx-auto">
-            <Image className="mb-[20px]" imagePath="1.png" />
-            <Image className="mb-[20px]" imagePath="2.png" />
+            {contactMeImg?.slice(0, 2)?.map((img, index) => (
+              <Image key={index} className="mb-[20px]" imagePath={img} />
+            ))}
           </div>
         </div>
 
         <div className="flex justify-between absolute top-[10%] md:top-[30%] lg:top-[44%] left-0 w-full rotate-0 md:rotate-2 lg:rotate-3">
-          <Image className="mb-[20px] ml-6 md:ml-0" imagePath="3.png" />
-          <Image className="mb-[20px] mr-2 md:mr-0" imagePath="4.png" />
+          {contactMeImg?.slice(2, 4)?.map((img, index) => (
+            <Image key={index + 2} className={`mb-[20px] ${index === 0 ? 'ml-6 md:ml-0' : 'mr-2 md:mr-0'}`} imagePath={img} />
+          ))}
         </div>
 
         <div className="absolute bottom-[53%] md:bottom-[12%] lg:bottom-0 left-0 rotate-3 lg:-rotate-2 w-full">
           <div className="flex justify-between w-[70%] md:w-[80%] mx-auto">
-            <Image className="mb-[20px]" imagePath="5.png" />
-            <Image className="mb-[20px]" imagePath="6.png" />
+            {contactMeImg?.slice(4)?.map((img, index) => (
+              <Image key={index + 4} className="mb-[20px]" imagePath={img} />
+            ))}
           </div>
         </div>
       </div>
@@ -69,3 +54,25 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
+
+
+
+
+// this is the image component to show image
+export const Image = ({
+  className,
+  imagePath,
+}: {
+  className?: string;
+  imagePath: string;
+}) => {
+  return (
+    <div className={`w-[22px] md:w-[42px] h-[22px] md:h-[42px] ${className} rounded-full overflow-hidden`}>
+      <img
+        className="w-[22px] md:w-[42px] h-[22px] md:h-[42px]"
+        src={`/ContactMeImages/${imagePath}`}
+        alt="contact section"
+      />
+    </div>
+  );
+};
