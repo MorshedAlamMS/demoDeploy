@@ -1,3 +1,8 @@
+import {
+  bannerProfileImage,
+  feedBackImagesName,
+  feedBackPlatformName,
+} from "~/ContentData";
 import ClickMeTopSvg from "../../svg/ClickMeTopSvg";
 import StarSvg from "../../svg/StarSvg";
 import BannerButton from "../../ui/BannerButton";
@@ -19,7 +24,7 @@ const BannerSection = () => {
         <div className="lg:w-[200px] lg:h-[240px] w-[140px] h-[168px] pb-10 lg:mt-0 md:mt-[80px] mt-[50px]">
           <img
             className="w-full lg:h-[240px] h-[168px] object-contain"
-            src="/bannerImage.png"
+            src={`/Banner/${bannerProfileImage}`}
             alt="Avater"
           />
         </div>
@@ -54,10 +59,10 @@ const BannerSection = () => {
         {/* feedback */}
         <div className="max-w-[206px] flex items-center gap-[9px] pt-10">
           <div className="flex items-center">
-            <img src="/feedback1.png" alt="Feedback" />
+            <img src={`/feedback/${feedBackImagesName[0]}`} alt="Feedback" />
             <img
               className="ml-[-5px] z-10"
-              src="/feedback2.png"
+              src={`/feedback/${feedBackImagesName[1]}`}
               alt="Feedback"
             />
           </div>
@@ -76,7 +81,7 @@ const BannerSection = () => {
               </p>
             </div>
             <p className="text-xs text-tertiary-text font-medium">
-              On Upwork & Contra
+              On {feedBackPlatformName.map((item) => item).join(" , ")}
             </p>
           </div>
         </div>
