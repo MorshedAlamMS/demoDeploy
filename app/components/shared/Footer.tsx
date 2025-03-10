@@ -1,4 +1,4 @@
-import { Link, useLocation, useNavigate} from "@remix-run/react";
+import { Link, useLocation, useNavigate } from "@remix-run/react";
 import DiscordSvg from "../svg/footer/DiscordSvg";
 import FooterLogo from "../svg/footer/FooterLogo";
 import InstagramSvg from "../svg/footer/InstagramSvg";
@@ -12,24 +12,22 @@ const Footer = () => {
     const pathName = useLocation().pathname
     const navigate = useNavigate()
     const handleContactSection = () => {
-        if(pathName === '/'){
+        if (pathName === '/') {
             ScrollToSection('contact')
         }
-        if(pathName !== '/'){
+        if (pathName !== '/') {
             navigate('/contact')
         }
     }
     return (
         <footer className="lg:max-w-[1024px] md:max-w-[768px] mt-[100px] w-full mx-auto lg:space-y-10 space-y-[30px] flex flex-col items-center justify-center">
             {/* logo */}
-            <div>
-                <FooterLogo />
-            </div>
+            <FooterLogo />
             {/* route */}
             <div className="flex items-center lg:gap-[50px] gap-[30px]">
-                <Link to='/' className={buttonClass}>Home</Link>
-                <Link to='/portfolio' className={buttonClass}>Portfolio</Link>
-                <Link to='/blogs' className={buttonClass}>Blogs</Link>
+                <button onClick={handleContactSection} className={buttonClass}>Home</button>
+                <button onClick={handleContactSection} className={buttonClass}>Portfolio</button>
+                <button onClick={handleContactSection} className={buttonClass}>About me</button>
                 <button onClick={handleContactSection} className={buttonClass}>Contact</button>
             </div>
             {/* Social liks */}
