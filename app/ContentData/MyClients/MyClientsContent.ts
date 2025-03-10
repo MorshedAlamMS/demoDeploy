@@ -43,7 +43,7 @@ export const clientsSubs = [
   "18.2M subs",
 ];
 
-// * Image will be uploaded in /public/MyClients/
+// * Image will be uploaded in /public/MyClientsImages/
 // * Make sure the image name is the same as the name in the array
 export const clientsImg = [
   "client1.png",

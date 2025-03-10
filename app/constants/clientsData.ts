@@ -155,27 +155,3 @@ export const clientsReviews: IClientReview[] = [
     clientImage: "/clientReview/Kamahley.png",
   },
 ];
-
-
-export const clientsWork = [
-  {
-    img: '/marquee/thumbnail1.png',
-    alt: 'Thumbnail'
-  },
-  {
-    img: '/marquee/thumbnail2.png',
-    alt: 'Thumbnail'
-  },
-  {
-    img: '/marquee/thumbnail3.png',
-    alt: 'Thumbnail'
-  },
-  {
-    img: '/marquee/thumbnail4.png',
-    alt: 'Thumbnail'
-  },
-  {
-    img: '/marquee/thumbnail5.png',
-    alt: 'Thumbnail'
-  }
-]

@@ -14,14 +14,14 @@ const ClientCard = ({
         height={140}
         width={140}
         alt="Client"
-        src={`/MyClients/${imgName}`}
+        src={`/MyClientsImages/${imgName}`}
       />
       <img
         className="rounded-full lg:hidden flex"
         height={70}
         width={70}
         alt="Client"
-        src={`/MyClients/${imgName}`}
+        src={`/MyClientsImages/${imgName}`}
       />
       <div className="flex flex-col items-center">
         <figcaption className="font-bricolage font-semibold leading-[160%] text-primary-text text-xs lg:text-xl">
