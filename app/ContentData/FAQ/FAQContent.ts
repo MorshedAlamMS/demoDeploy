@@ -28,16 +28,16 @@ export const questions = [
 
 // 👉 Store answers in an array
 export const answers = [
-    "My favorite color is blue.",
-    "I like to spend my weekends hiking and exploring new places.",
-    "My dream vacation destination is Japan.",
-    "I enjoy painting and playing video games.",
-    "One of my favorite movies is Inception.",
-    "Yes, I have a dog named Max.",
-    "I listen to a lot of indie and rock music.",
-    "My favorite food is pizza.",
-    "Yes, I enjoy basketball and swimming.",
-    "My favorite season is autumn because of the beautiful colors."
+    "My favorite color is blue.", //answer1
+    "I like to spend my weekends hiking and exploring new places.",//answer2
+    "My dream vacation destination is Japan.",//answer3
+    "I enjoy painting and playing video games.",//answer4
+    "One of my favorite movies is Inception.",//answer5
+    "Yes, I have a dog named Max.",//answer6
+    "I listen to a lot of indie and rock music.",//answer7
+    "My favorite food is pizza.",//answer8
+    "Yes, I enjoy basketball and swimming.",//answer9
+    "My favorite season is autumn because of the beautiful colors."//answer10
 ];
 
 
