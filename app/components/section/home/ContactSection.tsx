@@ -1,5 +1,6 @@
 import { GetYourThumbnailButton } from "~/components/shared/GetYourThumbnailButton";
 import SectionHeading from "~/components/shared/SectionHeading";
+import { contactMeDescription } from "~/ContentData";
 
 export const Image = ({
   className,
@@ -9,11 +10,13 @@ export const Image = ({
   imagePath: string;
 }) => {
   return (
-    <img
-      className={`w-[22px] md:w-[42px] h-[22px] md:h-[42px] ${className}`}
-      src={`/contact/${imagePath}`}
-      alt="contact section"
-    />
+    <div className={`w-[22px] md:w-[42px] h-[22px] md:h-[42px] ${className} rounded-full overflow-hidden`}>
+      <img
+        className="w-[22px] md:w-[42px] h-[22px] md:h-[42px]"
+        src={`/contact/${imagePath}`}
+        alt="contact section"
+      />
+    </div>
   );
 };
 
@@ -32,7 +35,7 @@ const ContactSection = () => {
           />
           {/* section description */}
           <p className="mt-[42px] mb-[46px] lg:my-[36px] w-full md:max-w-[340px] lg:max-w-[614px] max-w-[349px] mx-auto text-center font-medium font-bricolage text-tertiary-text text-base lg:text-[20px] leading-[160%]">
-          Got a project, an idea, or just a creative spark you want to explore? I’m all ears. Whether you need expert insights, collaboration, or just want to chat about possibilities.
+            {contactMeDescription}
           </p>
 
           {/* get your thumbnail done button */}
