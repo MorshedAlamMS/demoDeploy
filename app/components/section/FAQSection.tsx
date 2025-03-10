@@ -1,9 +1,9 @@
 import { useState, useRef } from "react";
 import { nanoid } from "nanoid";
 import SectionHeading from "../shared/SectionHeading";
-import { faqData } from "~/constants/faqData";
 import PlusSVG from "../svg/faq/PlusSVG";
 import MinusSVG from "../svg/faq/MinusSVG";
+import { faqData } from "~/constants/faqData";
 
 export default function FAQSection() {
   return (
@@ -62,7 +62,7 @@ function FAQItem({ faq, index }: { faq: { question: string; answer: string[] }, 
         <div className="py-[18px]">
           <p className="border-t border-black/5"></p>
         </div>
-        <div className="text-left">{faq?.answer?.map((ans) => <p className="py-1" key={nanoid()}>{`\n${ans}`}</p>)}</div>
+        <div className="text-left text-secondary-text text-xl font-medium">{faq?.answer}</div>
       </div>
     </button>
   );
