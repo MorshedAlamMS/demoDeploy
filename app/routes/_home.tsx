@@ -2,7 +2,7 @@ import { Outlet, useLocation, useNavigation } from "@remix-run/react";
 import { useEffect } from "react";
 import Footer from "~/components/shared/Footer";
 import { Loading } from "~/components/shared/loading/Loading";
-import Navbar from "~/components/shared/Navbar";
+import Navbar from "~/components/shared/navbar/Navbar";
 
 export default function HomeLayout() {
   const location = useLocation();

@@ -4,7 +4,7 @@ import FooterLogo from "../svg/footer/FooterLogo";
 import InstagramSvg from "../svg/footer/InstagramSvg";
 import PinterestSvg from "../svg/footer/PinterestSvg";
 import TwiteerSvg from "../svg/footer/TwiteerSvg";
-import { scrollToSection } from "./Navbar";
+import { ScrollToSection } from "../ui-action/ScrollToSection";
 
 
 
@@ -13,7 +13,7 @@ const Footer = () => {
     const navigate = useNavigate()
     const handleContactSection = () => {
         if(pathName === '/'){
-            scrollToSection('contact')
+            ScrollToSection('contact')
         }
         if(pathName !== '/'){
             navigate('/contact')
