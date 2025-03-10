@@ -4,6 +4,14 @@ import { ScrollToSection } from "~/components/ui-action/ScrollToSection";
 import { NavLink } from "./utils/NavLInk";
 import { buttonClass, navLinks } from "./utils/constant";
 
+/**
+ * The main navigation bar of the website.
+ *
+ * The navigation bar is fixed to the top of the screen and contains links to the main sections of the website.
+ * It uses the IntersectionObserver API to automatically update the active link when the user scrolls to a section.
+ *
+ * @returns The JSX element for the navigation bar.
+ */
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("");
 
