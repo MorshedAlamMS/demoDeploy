@@ -1,4 +1,4 @@
-import { firstParagraph, imageName, secondParagraph } from "~/ContentData";
+import { introPartOne, imageName, name, introPartTwo } from "~/ContentData";
 import { GetYourThumbnailButton } from "../../shared/GetYourThumbnailButton";
 import SectionHeading from "../../shared/SectionHeading";
 
@@ -26,9 +26,14 @@ const AboutMeSection = () => {
           title="Who’s Making Your Thumbnails?"
           titleClass="lg:max-w-[444px] max-w-[230px]"
         />
+        {/* paragraphs */}
         <div className="lg:space-y-8 space-y-7">
-          <p className={pClass}>{firstParagraph}</p>
-          <p className={pClass}>{secondParagraph}</p>
+          <p className={pClass}>
+            Hey, I’m{" "}
+            <span className="text-primary-text font-bold">{name}</span>{" "}
+            {introPartOne}
+          </p>
+          <p className={pClass}>{introPartTwo}</p>
         </div>
         {/* get your thumbnail button */}
         <GetYourThumbnailButton />
