@@ -1,4 +1,4 @@
-import BannerSection from "~/components/section/BannerSection";
+import BannerSection from "~/components/section/home/BannerSection";
 import FAQSection from "~/components/section/FAQSection";
 import ContactSection from "~/components/section/home/ContactSection";
 import Portfolio from "~/components/section/home/Portfolio";
@@ -9,26 +9,21 @@ import ReachUsSection from "~/components/section/ReachUsSection";
 import WhoMakingUrThumbnail from "~/components/section/WhoMakingUrThumbnail";
 import MyStrategy from "~/components/section/home/MyStrategy";
 
-
 const Home = () => {
-
-    return (
-        <>
-            {/* banner */}
-            <div className="lg:space-y-[100px] md:space-y-[90px] space-y-[40px]">
-                <BannerSection />
-                <Portfolio />
-                <WhoMakingUrThumbnail />
-                <MyStrategy />
-                <Process />
-                <VideoSection />
-                <Testimonials />
-                <FAQSection />
-                <ContactSection />
-                <ReachUsSection />
-            </div>
-        </>
-    );
+  return (
+    <div className="lg:space-y-[100px] md:space-y-[90px] space-y-[40px]">
+      <BannerSection />
+      <Portfolio />
+      <WhoMakingUrThumbnail />
+      <MyStrategy />
+      <Process />
+      <VideoSection />
+      <Testimonials />
+      <FAQSection />
+      <ContactSection />
+      <ReachUsSection />
+    </div>
+  );
 };
 
 export default Home;
