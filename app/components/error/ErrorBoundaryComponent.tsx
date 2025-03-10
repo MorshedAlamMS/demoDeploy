@@ -12,7 +12,7 @@ export function ErrorBoundaryComponent({ error }: any) {
     status = error.status || status
     message = error.statusText || message
     details =
-      error.data?.message || 'Something went wrong. Please try again later.'
+      error?.data?.message || 'Something went wrong. Please try again later.'
   } else if (error && error instanceof Error) {
     details = error.message
   }
