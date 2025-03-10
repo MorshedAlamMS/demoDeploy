@@ -1,0 +1,33 @@
+name: Preview CI/CD Pipeline
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build the project
+        run: pnpm build
+
+      - name: Deploy to preview Server
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: "${{ secrets.PREVIEW_SERVER_HOST }}"
+          username: "${{ secrets.PREVIEW_SERVER_USERNAME }}"
+          key: "${{ secrets.PREVIEW_SERVER_SSH_PRIVATE_KEY }}"
+          port: 2020
+          script: ~/thumbnail-boss/scripts/deploy_preview.sh
