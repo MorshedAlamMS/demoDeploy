@@ -4,10 +4,10 @@ import ContactSection from "~/components/section/home/ContactSection";
 import Portfolio from "~/components/section/home/Portfolio";
 import Process from "~/components/section/home/Process";
 import Testimonials from "~/components/section/home/Testimonials";
-import VideosButNoViews from "~/components/section/home/VideosButNoViews";
 import VideoSection from "~/components/section/home/VideoSection";
 import ReachUsSection from "~/components/section/ReachUsSection";
 import WhoMakingUrThumbnail from "~/components/section/WhoMakingUrThumbnail";
+import MyStrategy from "~/components/section/home/MyStrategy";
 
 
 const Home = () => {
@@ -19,7 +19,7 @@ const Home = () => {
                 <BannerSection />
                 <Portfolio />
                 <WhoMakingUrThumbnail />
-                <VideosButNoViews />
+                <MyStrategy />
                 <Process />
                 <VideoSection />
                 <Testimonials />
