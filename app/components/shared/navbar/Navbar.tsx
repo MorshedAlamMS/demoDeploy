@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Logo } from "~/components/svg/Logo";
 import { ScrollToSection } from "~/components/ui-action/ScrollToSection";
 import { NavLink } from "./utils/NavLInk";
-import { buttonClass, navLinks } from "./utils/constant";
+import { buttonClass, navLinks, sectionIds } from "./utils/constant";
 
 /**
  * The main navigation bar of the website.
@@ -16,7 +16,6 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
-    const sectionIds = ["home", "works", "about", "contact"];
     const observerOptions = {
       threshold: 0.6,
     };

@@ -6,3 +6,5 @@ export const navLinks = [
   { id: "about", label: "About Me" },
   { id: "contact", label: "Contact" },
 ];
+
+export const sectionIds = ["home", "works", "about", "contact"];
