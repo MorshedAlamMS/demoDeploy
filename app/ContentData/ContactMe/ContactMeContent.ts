@@ -1,8 +1,8 @@
-// ===============================
-// CONTACT ME CONTENT
-// ===============================
+/* 
+===============================
+    CONTACT ME CONTENT
+===============================
 
-/*
 ✅ HOW TO EDIT THIS FILE?
 --------------------------------
 1️⃣ Update the contactMeDescription with your personal information.
@@ -14,9 +14,11 @@
 
 export const contactMeDescription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 
-
-// * image will be uploaded in /public/ContactMeImages/
-// * make sure the image name is same as the name in the array
+/*
+ * image will be uploaded in /public/ContactMeImages/
+ * make sure the image name is same as the name in the array
+ * image will be displayed in the order of the array
+*/
 export const contactMeImg = [
     "1.png",
     "2.png",
