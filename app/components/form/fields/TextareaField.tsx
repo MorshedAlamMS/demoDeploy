@@ -6,7 +6,7 @@ export default function TextareaField({
 }: {
   label: string;
   name: string;
-  onChange:any;
+  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
   value:string
 }) {
   return (

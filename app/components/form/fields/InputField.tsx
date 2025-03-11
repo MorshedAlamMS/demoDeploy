@@ -8,7 +8,7 @@ export default function InputField({
   label: string;
   type: string;
   name: string;
-  onChange:any;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   value:string
 }) {
   return (
