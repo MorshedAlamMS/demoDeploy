@@ -67,7 +67,7 @@ export const feedBackPlatformImagesName =
 export const feedBackPlatformName =
   // * Feedback Platforms: List the platforms where you received feedback.
   // * Ensure the names correspond correctly to the displayed feedback.
-  ['Fiverr', 'Upwork']
+  ['Free', 'Work']
 
 export const feedBackStar =
   // * Feedback Star: Number of stars to display (e.g., 4.5)
@@ -77,4 +77,4 @@ export const feedBackStar =
 export const buttonsBgColor =
   // * Buttons Background Colors: Array with two colors for the buttons (Works and Contact)
   // * Ensure the array contains exactly two valid hexadecimal color values.
-  ['#000000', '#252B37']
+  ['#60A5FA', '#252B37']
