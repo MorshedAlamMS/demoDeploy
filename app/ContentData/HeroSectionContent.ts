@@ -77,4 +77,4 @@ export const feedBackStar =
 export const buttonsBgColor =
   // * Buttons Background Colors: Array with two colors for the buttons (Works and Contact)
   // * Ensure the array contains exactly two valid hexadecimal color values.
-  ['#60A5FA', '#252B37']
+  ['#00000019', '#252B37']
