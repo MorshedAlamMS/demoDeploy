@@ -5,45 +5,45 @@ import {
   feedBackPlatformName,
   feedBackStar,
   buttonsBgColor,
-} from "~/ContentData";
-import ClickMeTopSvg from "../../svg/ClickMeTopSvg";
-import StarSvg from "../../svg/StarSvg";
-import BannerButton from "../../ui/BannerButton";
-import Clients from "./Clients";
-import { nanoid } from "nanoid";
+} from '~/ContentData'
+import ClickMeTopSvg from '../../svg/ClickMeTopSvg'
+import StarSvg from '../../svg/StarSvg'
+import BannerButton from '../../ui/BannerButton'
+import Clients from './Clients'
+import { nanoid } from 'nanoid'
 
 const BannerSection = () => {
   // Error handling: Ensure bannerTitle is a valid string
   const validTitle =
-    typeof heroSectionTitle === "string" && heroSectionTitle.trim().length > 0
+    typeof heroSectionTitle === 'string' && heroSectionTitle.trim().length > 0
       ? heroSectionTitle
-      : "Your awesome title goes here";
-  const words = validTitle.split(" ");
+      : 'Your awesome title goes here'
+  const words = validTitle.split(' ')
 
-  if (words.length === 0) return null;
+  if (words.length === 0) return null
 
   // Always extract the last word for special styling
-  const lastWord = words[words.length - 1];
+  const lastWord = words[words.length - 1]
   // Determine the split index for the remaining words (excluding the last word)
-  const remainingWords = words.slice(0, words.length - 1);
-  const splitIndex = Math.ceil(remainingWords.length / 2);
+  const remainingWords = words.slice(0, words.length - 1)
+  const splitIndex = Math.ceil(remainingWords.length / 2)
   // First part: the first half of the remaining words
-  const firstPart = remainingWords.slice(0, splitIndex).join(" ");
+  const firstPart = remainingWords.slice(0, splitIndex).join(' ')
   // Middle part: the second half of the remaining words
-  const middlePart = remainingWords.slice(splitIndex).join(" ");
+  const middlePart = remainingWords.slice(splitIndex).join(' ')
 
   // Ensure buttonsBgColor contains valid values
   const [worksBg, contactBg] =
     buttonsBgColor && buttonsBgColor.length >= 2
       ? buttonsBgColor
-      : ["rgba(0,0,0,0.10)", "#252B37"];
+      : ['rgba(0,0,0,0.10)', '#252B37']
 
   return (
     <section
       id="home"
       style={{
         backgroundImage: "url('/Vector.png')",
-        backgroundSize: "repeat",
+        backgroundSize: 'repeat',
       }}
       className="py-5 transform -translate-y-[140px] lg:h-[806px] h-[692px]"
     >
@@ -113,7 +113,7 @@ const BannerSection = () => {
               </p>
             </div>
             <p className="text-xs text-tertiary-text font-medium">
-              On {feedBackPlatformName.join(" , ")}
+              On {feedBackPlatformName.join(' , ')}
             </p>
           </div>
         </div>
@@ -121,7 +121,7 @@ const BannerSection = () => {
       {/* Clients / Marquee Section */}
       <Clients />
     </section>
-  );
-};
+  )
+}
 
-export default BannerSection;
+export default BannerSection

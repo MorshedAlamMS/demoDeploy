@@ -1,6 +1,6 @@
-import { introPartOne, imageName, name, introPartTwo } from "~/ContentData";
-import { GetYourThumbnailButton } from "../../shared/GetYourThumbnailButton";
-import SectionHeading from "../../shared/SectionHeading";
+import { introPartOne, imageName, name, introPartTwo } from '~/ContentData'
+import { GetYourThumbnailButton } from '../../shared/GetYourThumbnailButton'
+import SectionHeading from '../../shared/SectionHeading'
 
 /**
  * A section component for the about me page.
@@ -29,8 +29,7 @@ const AboutMeSection = () => {
         {/* paragraphs */}
         <div className="lg:space-y-8 space-y-7">
           <p className={pClass}>
-            Hey, I’m{" "}
-            <span className="text-primary-text font-bold">{name}</span>{" "}
+            Hey, I’m <span className="text-primary-text font-bold">{name}</span>{' '}
             {introPartOne}
           </p>
           <p className={pClass}>{introPartTwo}</p>
@@ -43,10 +42,10 @@ const AboutMeSection = () => {
         <img src={`/AboutMeImages/${imageName}`} alt="About me" />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default AboutMeSection;
+export default AboutMeSection
 
 const pClass =
-  "text-tertiary-text text-center lg:text-xl text-base font-bricolage font-normal";
+  'text-tertiary-text text-center lg:text-xl text-base font-bricolage font-normal'

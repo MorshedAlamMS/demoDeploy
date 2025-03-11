@@ -25,4 +25,4 @@
 --------------------------------
 */
 
-export const clientsWorkImages = ["thumbnail1.png", "thumbnail2.png"];
+export const clientsWorkImages = ['thumbnail1.png', 'thumbnail2.png']

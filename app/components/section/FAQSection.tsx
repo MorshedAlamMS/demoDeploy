@@ -1,9 +1,9 @@
-import { useState, useRef } from "react";
-import { nanoid } from "nanoid";
-import SectionHeading from "../shared/SectionHeading";
-import PlusSVG from "../svg/faq/PlusSVG";
-import MinusSVG from "../svg/faq/MinusSVG";
-import { faqData } from "~/constants/faqData";
+import { useState, useRef } from 'react'
+import { nanoid } from 'nanoid'
+import SectionHeading from '../shared/SectionHeading'
+import PlusSVG from '../svg/faq/PlusSVG'
+import MinusSVG from '../svg/faq/MinusSVG'
+import { faqData } from '~/constants/faqData'
 
 export default function FAQSection() {
   return (
@@ -19,27 +19,35 @@ export default function FAQSection() {
       <div className="space-y-[10px] w-full md:w-[676px] mx-auto">
         {faqData?.map(
           (faq, index) =>
-            faq.question && faq.answer && <FAQItem key={nanoid()} faq={faq} index={index} />
+            faq.question &&
+            faq.answer && <FAQItem key={nanoid()} faq={faq} index={index} />,
         )}
       </div>
     </section>
-  );
+  )
 }
 
 // Individual FAQ Item
-function FAQItem({ faq, index }: { faq: { question: string; answer: string[] }, index: number }) {
-  const [isOpen, setIsOpen] = useState(index === 0);
-  const contentRef = useRef<HTMLDivElement>(null);
+function FAQItem({
+  faq,
+  index,
+}: {
+  faq: { question: string; answer: string[] }
+  index: number
+}) {
+  const [isOpen, setIsOpen] = useState(index === 0)
+  const contentRef = useRef<HTMLDivElement>(null)
 
   const toggleFAQ = () => {
-    setIsOpen(!isOpen);
-  };
+    setIsOpen(!isOpen)
+  }
 
   return (
     <button
       onClick={toggleFAQ}
-      className={`text-base md:text-xl font-bricolage font-medium text-secondary-text leading-[160%] w-full rounded-[20px] py-[22px] md:py-6 px-4 lg:px-5 transition-colors duration-300 ease-in-out ${isOpen ? "bg-white" : "bg-white hover:bg-tertiary-fill"
-        }`}
+      className={`text-base md:text-xl font-bricolage font-medium text-secondary-text leading-[160%] w-full rounded-[20px] py-[22px] md:py-6 px-4 lg:px-5 transition-colors duration-300 ease-in-out ${
+        isOpen ? 'bg-white' : 'bg-white hover:bg-tertiary-fill'
+      }`}
     >
       <summary className="flex items-center justify-between">
         <h3 className="text-primary-text text-left">{faq.question}</h3>
@@ -53,17 +61,19 @@ function FAQItem({ faq, index }: { faq: { question: string; answer: string[] }, 
         ref={contentRef}
         className="overflow-hidden transition-all duration-500 ease-in-out"
         style={{
-          height: isOpen ? `${contentRef.current?.scrollHeight}px` : "0px",
+          height: isOpen ? `${contentRef.current?.scrollHeight}px` : '0px',
           opacity: isOpen ? 1 : 0,
-          transform: isOpen ? "translateY(0)" : "translateY(-10px)",
+          transform: isOpen ? 'translateY(0)' : 'translateY(-10px)',
         }}
       >
         {/* Divider */}
         <div className="py-[18px]">
           <p className="border-t border-black/5"></p>
         </div>
-        <div className="text-left text-secondary-text text-xl font-medium">{faq?.answer}</div>
+        <div className="text-left text-secondary-text text-xl font-medium">
+          {faq?.answer}
+        </div>
       </div>
     </button>
-  );
+  )
 }

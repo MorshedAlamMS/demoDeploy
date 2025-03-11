@@ -29,25 +29,25 @@
 
 // * This array holds the names of your clients.
 export const clientsName = [
-  "Client One",
-  "Client Two",
-  "Client Three",
-  "Client Four",
-];
+  'Client One',
+  'Client Two',
+  'Client Three',
+  'Client Four',
+]
 
 // * This array holds the subscriber counts for each client.
 export const clientsSubs = [
-  "7.6M subs",
-  "24.5M subs",
-  "854K subs",
-  "18.2M subs",
-];
+  '7.6M subs',
+  '24.5M subs',
+  '854K subs',
+  '18.2M subs',
+]
 
 // * Image will be uploaded in /public/MyClientsImages/
 // * Make sure the image name is the same as the name in the array
 export const clientsImg = [
-  "client1.png",
-  "client2.png",
-  "client3.png",
-  "client4.png",
-];
+  'client1.png',
+  'client2.png',
+  'client3.png',
+  'client4.png',
+]
