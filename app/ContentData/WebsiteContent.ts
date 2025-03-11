@@ -38,11 +38,13 @@ These variables are used to set up important SEO and branding details such as:
 
 export const websiteName = 'Ease'
 
+export const websiteColor = "#FF0000"
+
 export const metaTitle = 'Design Your Thumbnails with Ease'
 
 export const metaDescription =
-  "Easily create stunning thumbnails for your YouTube videos with Thumbnail Boss. Our AI-powered tool generates high-quality thumbnails that grab viewers' attention and boost engagement. Try it now and take your YouTube channel to the next level!"
+   "Easily create stunning thumbnails for your YouTube videos with Thumbnail Boss. Our AI-powered tool generates high-quality thumbnails that grab viewers' attention and boost engagement. Try it now and take your YouTube channel to the next level!"
 
 export const faviconName =
-  // * Favicon: The file name located in the `/public` folder
-  'favicon.png'
+   // * Favicon: The file name located in the `/public` folder
+   'favicon.png'

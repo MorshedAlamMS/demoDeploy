@@ -9,7 +9,7 @@ const SectionHeading = ({
     <div className="flex flex-col items-center">
       {sectionName && (
         <p className="text-secondary-text w-fit text-sm text-center font-semibold py-1 font-bricolage flex items-center gap-x-[6px] px-2 rounded-lg border border-brand-parrot">
-          <span className="w-[7px] h-[7px] bg-brand-parrot-750 rounded-full"></span>{' '}
+          <span className="w-[7px] h-[7px] bg-brand-parrot rounded-full"></span>{' '}
           {sectionName}
         </p>
       )}
