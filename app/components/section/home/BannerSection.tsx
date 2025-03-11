@@ -78,12 +78,14 @@ const BannerSection = () => {
           <BannerButton
             idName="works"
             buttonName="See works"
-            className={`bg-[${buttonsBgColors[0]}] text-primary-text border`}
+            bgColor={buttonsBgColors[0]}
+            className="text-primary-text"
           />
           <BannerButton
             idName="contact"
             buttonName="Contact Me"
-            className={`bg-[${buttonsBgColors[1]}] text-white border`}
+            bgColor={buttonsBgColors[1]}
+            className="text-white"
           />
         </div>
         {/* Feedback Section */}
