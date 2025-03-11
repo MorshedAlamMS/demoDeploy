@@ -13,12 +13,13 @@ import { Toaster } from "react-hot-toast";
 import { useEffect, useState } from "react";
 import { Loading } from "~/components/shared/loading/Loading";
 import { ErrorBoundaryComponent } from "./components/error/ErrorBoundaryComponent";
+import { faviconName } from "./ContentData/WebsiteContent";
 
 export const links: LinksFunction = () => [
   {
-    rel: 'icon',
-    href: '/favicon.png',
-    type: 'image/png',
+    rel: "icon",
+    href: `/${faviconName}`,
+    type: "image/png",
   },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
