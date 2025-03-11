@@ -1,14 +1,34 @@
 import {
+  bannerTitle,
   bannerProfileImage,
   feedBackImagesName,
   feedBackPlatformName,
+  feedBackStar,
+  buttonsBgColor,
 } from "~/ContentData";
 import ClickMeTopSvg from "../../svg/ClickMeTopSvg";
 import StarSvg from "../../svg/StarSvg";
 import BannerButton from "../../ui/BannerButton";
 import Clients from "./Clients";
+import { nanoid } from "nanoid";
 
 const BannerSection = () => {
+  // Split title into words
+  const words = bannerTitle.split(" ");
+
+  // Always extract the last word for special styling
+  const lastWord = words[words.length - 1];
+
+  // Determine the split index for the remaining words
+  // Here, we use the first half of the remaining words (excluding the last word)
+  const remainingWords = words.slice(0, words.length - 1);
+  const splitIndex = Math.ceil(remainingWords.length / 2);
+
+  // First part: the first half of the remaining words
+  const firstPart = remainingWords.slice(0, splitIndex).join(" ");
+  // Middle part: the second half of the remaining words
+  const middlePart = remainingWords.slice(splitIndex).join(" ");
+
   return (
     <section
       id="home"
@@ -29,30 +49,35 @@ const BannerSection = () => {
           />
         </div>
         {/* middle content */}
-        <div className="text-primary-text text-center lg:text-[55px] text-[30px] leading-[120%] -tracking-[1.5px] lg:-tracking-[2.75px] mt-[30px] font-bold font-sans capitalize pb-10">
-          <p>I design thumbnails</p>
+        <h1 className="text-primary-text text-center lg:text-[55px] text-[30px] leading-[120%] -tracking-[1.5px] lg:-tracking-[2.75px] mt-[30px] font-bold font-sans capitalize pb-10">
+          {/* first part of banner title */}
+          <p>{firstPart}</p>
           <div className="flex gap-[10px]">
-            <p>that make people</p>
+            {/* middle part of banner title */}
+            {middlePart && <p className="whitespace-nowrap">{middlePart}</p>}
             <div className="relative">
-              <p className="px-[10px] bg-brand-parrot rotate-[-2deg]">click!</p>
+              <p className="px-[10px] bg-brand-parrot rotate-[-2deg]">
+                {/* last word of banner title */}
+                {lastWord}
+              </p>
               {/* top right corner svg */}
               <span className="absolute -top-4 -right-4">
                 <ClickMeTopSvg />
               </span>
             </div>
           </div>
-        </div>
+        </h1>
         {/* buttons */}
         <div className="flex gap-[14px]">
           <BannerButton
             idName="works"
             buttonName={"See works"}
-            className={"bg-[rgba(0,0,0,0.10)] text-primary-text"}
+            className={`bg-[${buttonsBgColor[0]}] text-primary-text`}
           />
           <BannerButton
             idName="contact"
             buttonName={"Contact Me"}
-            className={"bg-[#252B37] text-white"}
+            className={`bg-[${buttonsBgColor[1]}] text-white`}
           />
         </div>
 
@@ -70,14 +95,13 @@ const BannerSection = () => {
           <div>
             <div className="flex items-center gap-[6px]">
               <div className="flex">
-                <StarSvg />
-                <StarSvg />
-                <StarSvg />
-                <StarSvg />
-                <StarSvg />
+                {!!feedBackStar &&
+                  Array.from({ length: feedBackStar }).map(() => (
+                    <StarSvg key={nanoid()} />
+                  ))}
               </div>
               <p className="text-secondary-text text-sm font-medium">
-                <span className="font-bold">5</span> Stars
+                <span className="font-bold">{feedBackStar}</span> Stars
               </p>
             </div>
             <p className="text-xs text-tertiary-text font-medium">
