@@ -33,9 +33,10 @@ export default function ReachUsForm() {
     const { name, email, individualOrBusiness, yourBudget, yourChannelLink, message } = formData;
     console.log(formData);
     if (!name || !email || !message) {
-      toast.error("Please fill in all required fields.", { icon: <ErrorSVG /> });
+      toast.error("Please fill in all fields.", { icon: <ErrorSVG /> });
       return;
     }
+    toast.success("Redirecting to Gmail...", { icon: <SuccessSVG /> });
 
     // Email setup
     const recipientEmail = myEmail; // Change this to the recipient's email
@@ -45,12 +46,11 @@ export default function ReachUsForm() {
       `🔹 Budget: ${yourBudget}%0A` +
       `🔹 Channel Link: ${yourChannelLink}%0A%0A` +
       `💬 Message: ${message}%0A%0A` +
-      `Best regards,%0A[Your Name]%0A[Your Role]%0A[Your Contact Information]`;
+      `Best regards,%0A${name}%0A${email}`;
 
     // Open Gmail with pre-filled details
     window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${recipientEmail}&su=${encodeURIComponent(subject)}&body=${body}`);
 
-    toast.success("Redirecting to Gmail...", { icon: <SuccessSVG /> });
 
     // Reset form
     if (formRef.current) formRef.current.reset();
@@ -72,17 +72,17 @@ export default function ReachUsForm() {
     >
       {/* Form Fields */}
       <div className="grid grid-cols-2 gap-3 md:gap-4 items-center">
-        <InputField label="Full name" type="text" name="name" value={formData.name} onChange={handleChange} required />
-        <InputField label="Your email address" type="email" name="email" value={formData.email} onChange={handleChange} required />
+        <InputField label="Full name" type="text" name="name" value={formData.name} onChange={handleChange} />
+        <InputField label="Your email address" type="email" name="email" value={formData.email} onChange={handleChange} />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 items-center">
-        <InputField label="Individual or business?" type="text" name="individualOrBusiness" value={formData.individualOrBusiness} onChange={handleChange} required />
-        <InputField label="Your budget" type="text" name="yourBudget" value={formData.yourBudget} onChange={handleChange} required />
+        <InputField label="Individual or business?" type="text" name="individualOrBusiness" value={formData.individualOrBusiness} onChange={handleChange} />
+        <InputField label="Your budget" type="text" name="yourBudget" value={formData.yourBudget} onChange={handleChange} />
       </div>
 
-      <InputField label="Your channel link" type="text" name="yourChannelLink" value={formData.yourChannelLink} onChange={handleChange} required />
-      <TextareaField label="Write your message here" name="message" value={formData.message} onChange={handleChange} required />
+      <InputField label="Your channel link" type="text" name="yourChannelLink" value={formData.yourChannelLink} onChange={handleChange} />
+      <TextareaField label="Write your message here" name="message" value={formData.message} onChange={handleChange} />
 
       {/* Submit Button */}
       <div className="flex justify-center pt-5">
@@ -90,7 +90,7 @@ export default function ReachUsForm() {
           type="submit"
           className="px-5 py-3 w-[112px] h-[46px] bg-black/10 rounded-[10px] text-base text-primary-text font-bold font-gabarito leading-6 hover:text-[15px] hover:scale-90 transition-all duration-300 ease-in-out"
         >
-          Send Email
+          Submit
         </button>
       </div>
     </form>
