@@ -46,3 +46,11 @@ export const myStrategySectionBottomDescription =
 export const myStrategySectionBottomTitle =
 // Your strategy section bottom title text ---You can replace your title that will attract your client
 "⏳ Get a high-performing thumbnail today before your competition beats you to it!"
+
+
+// Card Color Customization
+// --- You can replace the hex color codes below with your preferred colors.
+export const stepOneCardColor = "#FEE690";
+export const stepTwoCardColor = "#D5C9EE";
+export const stepThreeCardColor = "#D4E2A7";
+
