@@ -1,3 +1,0 @@
-export const metaDescription ='Create eye-catching, high-converting thumbnails that grab attention and drive views. Explore expert design tips, breakdowns, and strategies to make your YouTube thumbnails stand out.'
-
-export const metaDescriptionBlogs = 'Stay ahead in the YouTube game with expert insights on thumbnail design, breakdowns of viral thumbnails, and YouTube growth strategies. Learn how to create thumbnails that convert.'
