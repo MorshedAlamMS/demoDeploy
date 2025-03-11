@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import { websiteColor } from './app/ContentData/WebsiteContent'
 
 export default {
   darkMode: ['class'],
@@ -68,7 +69,7 @@ export default {
         'tertiary-text': '#666C79',
         'quaternary-text': '#8C919A',
 
-        'brand-parrot': '#FFD147',
+        'brand-parrot': websiteColor,
         'brand-parrot-750': '#CCA739',
         'brand-parrot-500': '#FFD147',
 
