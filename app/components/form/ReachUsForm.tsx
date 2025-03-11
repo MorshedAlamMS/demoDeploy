@@ -31,7 +31,7 @@ export default function ReachUsForm() {
 
 
     const { name, email, individualOrBusiness, yourBudget, yourChannelLink, message } = formData;
-    console.log(formData);
+
     if (!name || !email || !message) {
       toast.error("Please fill in all fields.", { icon: <ErrorSVG /> });
       return;
