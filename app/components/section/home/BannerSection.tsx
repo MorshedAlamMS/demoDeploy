@@ -33,10 +33,9 @@ const BannerSection = () => {
   const middlePart = remainingWords.slice(splitIndex).join(' ')
 
   // Ensure buttonsBgColor contains valid values
-  const [worksBg, contactBg] =
-    buttonsBgColor && buttonsBgColor.length >= 2
-      ? buttonsBgColor
-      : ['rgba(0,0,0,0.10)', '#252B37']
+  const buttonsBgColors = buttonsBgColor
+    ? buttonsBgColor
+    : ['#60A5FA', '#252B37']
 
   return (
     <section
@@ -79,12 +78,14 @@ const BannerSection = () => {
           <BannerButton
             idName="works"
             buttonName="See works"
-            className={`bg-[${worksBg}] text-primary-text`}
+            bgColor={buttonsBgColors[0]}
+            className="text-primary-text"
           />
           <BannerButton
             idName="contact"
             buttonName="Contact Me"
-            className={`bg-[${contactBg}] text-white`}
+            bgColor={buttonsBgColors[1]}
+            className="text-white"
           />
         </div>
         {/* Feedback Section */}

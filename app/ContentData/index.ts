@@ -1,29 +1,29 @@
 // export About Me Content
-export * from './AboutMe/AboutMeContent'
+export * from './AboutMeContent'
 
 // export Client Reviews Content
-export * from './ClientsReviews/ClientsReviewsContent'
+export * from './ClientsReviewsContent'
 
 // export Contact Me Content
-export * from './ContactMe/ContactMeContent'
+export * from './ContactMeContent'
 
 // export FAQ Content
-export * from './FAQ/FAQContent'
+export * from './FAQContent'
 
 // export Hero Section Content
-export * from './HeroSection/HeroSectionContent'
+export * from './HeroSectionContent'
 
 // export My Client Content
-export * from './MyClients/MyClientsContent'
+export * from './MyClientsContent'
 
 // export My Strategy Section Content
-export * from './MyStrategySection/MyStrategySectionContent'
+export * from './MyStrategySectionContent'
 
 // export My Works Process Content
-export * from './MyWorkProcess/MyWorkProcessContent'
+export * from './MyWorkProcessContent'
 
 // export My Works Content
-export * from './MyWorks/MyWorksContent'
+export * from './MyWorksContent'
 
 // export Social Link Content
-export * from './SocialLinks/SocialLinksContent'
+export * from './SocialLinksContent'
