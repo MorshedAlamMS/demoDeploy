@@ -18,17 +18,21 @@ These variables are used to set up important SEO and branding details such as:
    - Update `websiteName` to reflect your brand or website name.
    - Example: `"Ease"` can be changed to `"YourBrand"`.
 
-2️⃣ **Meta Title:**
+2️⃣ **Website Color:**
+   - Update `websiteColor` with a hexadecimal color code.
+   - Example: `"#FF0000"` can be changed to `"#00FF00"` for green.
+
+3️⃣ **Meta Title:**
    - Update `metaTitle` to define the title that appears in search engine results.
    - This should be concise and descriptive.
    - Example: `"Design Your Thumbnails with Ease"` can be modified to `"Create Stunning Thumbnails"`.
 
-3️⃣ **Meta Description:**
+4️⃣ **Meta Description:**
    - Update `metaDescription` with a short description of your website.
    - This description should summarize what your website or service offers.
    - Example: Change the text to better reflect your updated service details if needed.
 
-4️⃣ **Favicon:**
+5️⃣ **Favicon:**
    - Update `faviconName` with the file name of your favicon.
    - **IMPORTANT:** The favicon file must be placed in the `/public` folder.
    - Example: `"favicon.png"` should exactly match the file name (including case) in the `/public` folder.
@@ -38,6 +42,7 @@ These variables are used to set up important SEO and branding details such as:
 
 export const websiteName = 'Ease'
 
+// * Website Color
 export const websiteColor = "#FF0000"
 
 export const metaTitle = 'Design Your Thumbnails with Ease'
