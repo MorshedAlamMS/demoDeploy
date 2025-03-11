@@ -1,23 +1,10 @@
-import { myStrategySectionStepOne, myStrategySectionStepThree, myStrategySectionStepTwo, stepOneCardColor, stepThreeCardColor, stepTwoCardColor } from "~/ContentData";
+import {myStrategySectionImages, myStrategySectionStepTitle, stepCardColor} from "~/ContentData";
 import { IMyStrategySteps } from "~/types";
 
-export const myStrategySteps : IMyStrategySteps[] = [
-    {
-        title: myStrategySectionStepOne,
-        image: "/MyStrategySectionImages/step1.png",
+export const myStrategySteps : IMyStrategySteps[] = 
+myStrategySectionStepTitle.map((step,index) => ({
+        title: step,
+        image: `/MyStrategySectionImages/${myStrategySectionImages[index]}`,
         alt: "Thumbnail",
-        bg: `bg-[${stepOneCardColor}]`
-    },
-    {
-        title: myStrategySectionStepTwo,
-        image: "/MyStrategySectionImages/step2.png",
-        alt: "Thumbnail",
-        bg: `bg-[${stepTwoCardColor}]`
-    },
-    {
-        title: myStrategySectionStepThree,
-        image: "/MyStrategySectionImages/step3.png",
-        alt: "Thumbnail",
-        bg: `bg-[${stepThreeCardColor}]`
-    },
-]
+        bg: `${stepCardColor[index]}`
+}))
