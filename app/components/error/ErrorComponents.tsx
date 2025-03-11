@@ -17,10 +17,6 @@ const ErrorComponents = ({
     script.src = 'https://cdn.tailwindcss.com'
     script.async = true
     document.body.appendChild(script)
-
-    return () => {
-      document.body.removeChild(script) // * Cleanup to prevent duplicates
-    }
   }, [])
 
   const [isClient, setIsClient] = useState(false)
