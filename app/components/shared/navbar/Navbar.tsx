@@ -28,7 +28,10 @@ const Navbar = () => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             setActiveSection(id)
+          } else {
+            setActiveSection('')
           }
+
         })
       }, observerOptions)
       observer.observe(element)
