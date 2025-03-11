@@ -19,16 +19,14 @@ export default function ReachUsForm() {
     message: "",
   });
 
+
   // Handle input changes
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    console.log(e.target.value);
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   // Handle form submission
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
+  const handleSubmit = () => {
 
     const { name, email, individualOrBusiness, yourBudget, yourChannelLink, message } = formData;
 
@@ -40,7 +38,7 @@ export default function ReachUsForm() {
 
     // Email setup
     const recipientEmail = myEmail; // Change this to the recipient's email
-    const subject = "Project Handover";
+    const subject = "Contact Form Submission";
     const body = `Hi ${name},%0A%0A` +
       `🔹 Individual or Business: ${individualOrBusiness}%0A` +
       `🔹 Budget: ${yourBudget}%0A` +
@@ -50,7 +48,6 @@ export default function ReachUsForm() {
 
     // Open Gmail with pre-filled details
     window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${recipientEmail}&su=${encodeURIComponent(subject)}&body=${body}`);
-
 
     // Reset form
     if (formRef.current) formRef.current.reset();
