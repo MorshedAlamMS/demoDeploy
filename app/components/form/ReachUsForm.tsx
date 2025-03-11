@@ -1,41 +1,35 @@
-import { useRef, useState } from 'react'
-import toast from 'react-hot-toast'
-import InputField from './fields/InputField'
-import TextareaField from './fields/TextareaField'
-import { ErrorSVG } from '../svg/toast/ErrorSVG'
-import { SuccessSVG } from '../svg/toast/SuccessSVG'
-import { myEmail } from '~/ContentData'
+import { useRef} from "react";
+import toast from "react-hot-toast";
+import InputField from "./fields/InputField";
+import TextareaField from "./fields/TextareaField";
+import { ErrorSVG } from "../svg/toast/ErrorSVG";
+import { SuccessSVG } from "../svg/toast/SuccessSVG";
+import { myEmail } from "~/ContentData";
+import { useNavigate} from "@remix-run/react";
 
 export default function ReachUsForm() {
-  const formRef = useRef<HTMLFormElement>(null)
+  const formRef = useRef<HTMLFormElement>(null);
+  const navigate = useNavigate();
 
-  // Store form data in state
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    individualOrBusiness: '',
-    yourBudget: '',
-    yourChannelLink: '',
-    message: '',
-  })
-
-  // Handle input changes
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
+  const clearParams = () => {
+    navigate("/", { replace: true }); // Navigates to the same route but removes query params
+  };
 
   // Handle form submission
-  const handleSubmit = () => {
-    const {
-      name,
-      email,
-      individualOrBusiness,
-      yourBudget,
-      yourChannelLink,
-      message,
-    } = formData
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
+
+    e.preventDefault(); // Prevent form from reloading the page
+
+        // Get form data using FormData API
+        const formData = new FormData(formRef.current!);
+
+        // Extract values
+        const name = formData.get("name") as string;
+        const email = formData.get("email") as string;
+        const individualOrBusiness = formData.get("individualOrBusiness") as string;
+        const yourBudget = formData.get("yourBudget") as string;
+        const yourChannelLink = formData.get("yourChannelLink") as string;
+        const message = formData.get("message") as string;
 
     if (!name || !email || !message) {
       toast.error('Please fill in all fields.', { icon: <ErrorSVG /> })
@@ -44,10 +38,10 @@ export default function ReachUsForm() {
     toast.success('Redirecting to Gmail...', { icon: <SuccessSVG /> })
 
     // Email setup
-    const recipientEmail = myEmail // Change this to the recipient's email
-    const subject = 'Contact Form Submission'
-    const body =
-      `Hi ${name},%0A%0A` +
+    const recipientEmail = myEmail; // Change this to the recipient's email
+    const subject = "Contact Form Submission";
+    const body = `Hi,%0A%0A` + 
+      `I am ${name},%0A%0A` +
       `🔹 Individual or Business: ${individualOrBusiness}%0A` +
       `🔹 Budget: ${yourBudget}%0A` +
       `🔹 Channel Link: ${yourChannelLink}%0A%0A` +
@@ -60,16 +54,9 @@ export default function ReachUsForm() {
     )
 
     // Reset form
-    if (formRef.current) formRef.current.reset()
-    setFormData({
-      name: '',
-      email: '',
-      individualOrBusiness: '',
-      yourBudget: '',
-      yourChannelLink: '',
-      message: '',
-    })
-  }
+    formRef.current!.reset();
+    clearParams()
+  };
 
   return (
     <form
@@ -79,52 +66,17 @@ export default function ReachUsForm() {
     >
       {/* Form Fields */}
       <div className="grid grid-cols-2 gap-3 md:gap-4 items-center">
-        <InputField
-          label="Full name"
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-        />
-        <InputField
-          label="Your email address"
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-        />
+        <InputField required={true} label="Full name" type="text" name="name"/>
+        <InputField required={true} label="Your email address" type="email" name="email" />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 items-center">
-        <InputField
-          label="Individual or business?"
-          type="text"
-          name="individualOrBusiness"
-          value={formData.individualOrBusiness}
-          onChange={handleChange}
-        />
-        <InputField
-          label="Your budget"
-          type="text"
-          name="yourBudget"
-          value={formData.yourBudget}
-          onChange={handleChange}
-        />
+        <InputField required={false} label="Individual or business?" type="text" name="individualOrBusiness" />
+        <InputField required={false} label="Your budget" type="text" name="yourBudget" />
       </div>
 
-      <InputField
-        label="Your channel link"
-        type="text"
-        name="yourChannelLink"
-        value={formData.yourChannelLink}
-        onChange={handleChange}
-      />
-      <TextareaField
-        label="Write your message here"
-        name="message"
-        value={formData.message}
-        onChange={handleChange}
-      />
+      <InputField required={false} label="Your channel link" type="text" name="yourChannelLink" />
+      <TextareaField required={true} label="Write your message here" name="message" />
 
       {/* Submit Button */}
       <div className="flex justify-center pt-5">
