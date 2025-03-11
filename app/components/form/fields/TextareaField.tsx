@@ -1,13 +1,12 @@
 export default function TextareaField({
   label,
   name,
-  onChange,
-  value
+  required
 }: {
   label: string;
   name: string;
-  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
-  value:string
+  required:boolean
+
 }) {
   return (
     <div className="flex flex-col w-full">
@@ -23,8 +22,7 @@ export default function TextareaField({
       <textarea
         id={name}
         name={name}
-        defaultValue={value}
-        onChange={(e)=>onChange(e)}
+        required={required}
         className="w-full outline-none mt-1 focus:outline-brand-parrot focus:outline cursor-pointer bg-secondary-fill hover:bg-tertiary-fill  rounded-[20px] px-4 py-3 h-[118px]"
       />
     </div>
