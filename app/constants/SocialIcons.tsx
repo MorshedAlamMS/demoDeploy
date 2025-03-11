@@ -16,14 +16,14 @@ import YoutubeSvg from "~/components/svg/socialIcons/YoutubeSvg";
  * Ensure the platform name in `socialLinks` matches the key in `socialIcons`.
  */
 export const socialIcons = {
-    Twitter: <TwiteerSvg />,   // Twitter icon component
-    Pinterest: <PinterestSvg />, // Pinterest icon component
-    Instagram: <InstagramSvg />, // Instagram icon component
-    Discord: <DiscordSvg />,   // Discord icon component
-    Facebook: <FacebookSvg />, // Facebook icon component
-    TikTok: <TiktokSvg />,     // TikTok icon component
-    YouTube: <YoutubeSvg />,   // YouTube icon component
-    WhatsApp: <WhatsAppSvg />,  // WhatsApp icon component
+    Twitter: <TwiteerSvg />,
+    Pinterest: <PinterestSvg />,
+    Instagram: <InstagramSvg />,
+    Discord: <DiscordSvg />,
+    Facebook: <FacebookSvg />,
+    TikTok: <TiktokSvg />,
+    YouTube: <YoutubeSvg />,
+    WhatsApp: <WhatsAppSvg />,
     LinkedIn: <LinkedInSvg />,
     Snapchat: <SnapChatSvg />,
     Behance: <BehanceSvg />,

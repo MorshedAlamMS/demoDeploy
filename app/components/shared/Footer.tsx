@@ -1,4 +1,5 @@
 
+import { nanoid } from "nanoid";
 import FooterLogo from "../svg/socialIcons/FooterLogo";
 import { ScrollToSection } from "../ui-action/ScrollToSection";
 import { socialLinks } from "~/ContentData";
@@ -20,9 +21,9 @@ const Footer = () => {
             </div>
             {/* Social liks */}
             <div className="flex items-center gap-[18px]">
-                {socialLinks.map((social, index) => (
-                    <a key={index} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.name}>
-                        {socialIcons[social.name]}
+                {socialLinks.map((social) => (
+                    <a key={nanoid()} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social?.name}>
+                        {socialIcons[social?.name as keyof typeof socialIcons] ?? null}
                     </a>
                 ))}
             </div>

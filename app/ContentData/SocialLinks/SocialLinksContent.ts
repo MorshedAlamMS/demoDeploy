@@ -18,7 +18,7 @@ expample:
     Instagram      
     Discord      
     Facebook      
-    TikTok       s
+    TikTok
     YouTube      
     WhatsApp
     LinkedIn
@@ -35,14 +35,14 @@ export const socialLinks = [
     { name: "Pinterest", href: "https://www.pinterest.com" },
     { name: "Instagram", href: "https://www.instagram.com" },
     { name: "Discord", href: "https://discord.com" },
-    { name: "Facebook", href: "https://www.facebook.com" },
-    { name: "YouTube", href: "https://www.youtube.com" },
-    { name: "TikTok", href: "https://www.tiktok.com" },
-    { name: "WhatsApp", href: "https://www.whatsapp.com" },
-    { name: "LinkedIn", href: "https://www.linkedin.com" },
-    { name: "Snapchat", href: "https://www.snapchat.com" },
-    { name: "Behance", href: "https://www.behance.net" },
-    { name: "Dribbble", href: "https://www.dribbble.com" },
+    // { name: "Facebook", href: "https://www.facebook.com" },
+    // { name: "YouTube", href: "https://www.youtube.com" },
+    // { name: "TikTok", href: "https://www.tiktok.com" },
+    // { name: "WhatsApp", href: "https://www.whatsapp.com" },
+    // { name: "LinkedIn", href: "https://www.linkedin.com" },
+    // { name: "Snapchat", href: "https://www.snapchat.com" },
+    // { name: "Behance", href: "https://www.behance.net" },
+    // { name: "Dribbble", href: "https://www.dribbble.com" },
 
 ];
 
