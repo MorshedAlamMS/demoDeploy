@@ -1,37 +1,37 @@
-import "../../tailwind.css";
-import { useEffect, useState } from "react";
-import { useNavigate } from "@remix-run/react";
+import '../../tailwind.css'
+import { useEffect, useState } from 'react'
+import { useNavigate } from '@remix-run/react'
 
 const ErrorComponents = ({
   message,
   details,
   status,
 }: {
-  message: string | null;
-  details: string | null;
-  status: number | null;
+  message: string | null
+  details: string | null
+  status: number | null
 }) => {
   // * force tailwind to load
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://cdn.tailwindcss.com";
-    script.async = true;
-    document.body.appendChild(script);
+    const script = document.createElement('script')
+    script.src = 'https://cdn.tailwindcss.com'
+    script.async = true
+    document.body.appendChild(script)
 
     return () => {
-      document.body.removeChild(script); // * Cleanup to prevent duplicates
-    };
-  }, []);
+      document.body.removeChild(script) // * Cleanup to prevent duplicates
+    }
+  }, [])
 
-  const [isClient, setIsClient] = useState(false);
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
-    setIsClient(true);
-  }, []);
+    setIsClient(true)
+  }, [])
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
-  if (!isClient) return null;
+  if (!isClient) return null
 
   return (
     <section className="h-screen w-full px border-l-[0.5px] border-r-[0.5px] flex flex-col justify-center items-center">
@@ -40,19 +40,19 @@ const ErrorComponents = ({
       </p>
       <p className="max-w-[550px] text-center text-black-text font-figtree text-[35px] mt-[30px] font-normal">
         {message ||
-          "Oops! It Looks Like The Page You’re Looking For Isn’t Available."}
+          'Oops! It Looks Like The Page You’re Looking For Isn’t Available.'}
       </p>
       <p className="text-tertiary-text mb-[30px] text-lg font-normal leading-[28px] font-geist mt-[30px]">
-        {details || "It might have been moved or doesn‘t exist anymore."}
+        {details || 'It might have been moved or doesn‘t exist anymore.'}
       </p>
       <button
         onClick={() => {
-          navigate("/");
+          navigate('/')
 
           // * wait to complete navigation
           setTimeout(() => {
-            window.location.reload(); // * Force a full reload
-          }, 100);
+            window.location.reload() // * Force a full reload
+          }, 100)
         }}
         className="mt-[30px]"
       >
@@ -65,6 +65,6 @@ const ErrorComponents = ({
         </button>
       </button>
     </section>
-  );
-};
-export default ErrorComponents;
+  )
+}
+export default ErrorComponents

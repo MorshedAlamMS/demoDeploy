@@ -16,7 +16,7 @@ const ClientWorkCard = ({ imgName }: { imgName: string }) => {
         src={`/MyWorksImages/${imgName}`}
       />
     </div>
-  );
-};
+  )
+}
 
-export default ClientWorkCard;
+export default ClientWorkCard

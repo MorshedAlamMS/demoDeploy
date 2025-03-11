@@ -28,5 +28,5 @@ export default function InputField({
         className="w-full focus:outline mt-1 focus:outline-brand-parrot cursor-pointer outline-none bg-secondary-fill hover:bg-tertiary-fill rounded-[20px] px-4 py-3 h-[52px]"
       />
     </div>
-  );
+  )
 }

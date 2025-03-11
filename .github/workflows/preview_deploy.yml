@@ -26,8 +26,8 @@ jobs:
       - name: Deploy to preview Server
         uses: appleboy/ssh-action@v1.2.0
         with:
-          host: "${{ secrets.PREVIEW_SERVER_HOST }}"
-          username: "${{ secrets.PREVIEW_SERVER_USERNAME }}"
-          key: "${{ secrets.PREVIEW_SERVER_SSH_PRIVATE_KEY }}"
+          host: '${{ secrets.PREVIEW_SERVER_HOST }}'
+          username: '${{ secrets.PREVIEW_SERVER_USERNAME }}'
+          key: '${{ secrets.PREVIEW_SERVER_SSH_PRIVATE_KEY }}'
           port: 2020
           script: ~/thumbnail-boss/scripts/deploy_preview.sh

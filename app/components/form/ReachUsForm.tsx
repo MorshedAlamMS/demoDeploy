@@ -32,10 +32,10 @@ export default function ReachUsForm() {
         const message = formData.get("message") as string;
 
     if (!name || !email || !message) {
-      toast.error("Please fill in all fields.", { icon: <ErrorSVG /> });
-      return;
+      toast.error('Please fill in all fields.', { icon: <ErrorSVG /> })
+      return
     }
-    toast.success("Redirecting to Gmail...", { icon: <SuccessSVG /> });
+    toast.success('Redirecting to Gmail...', { icon: <SuccessSVG /> })
 
     // Email setup
     const recipientEmail = myEmail; // Change this to the recipient's email
@@ -46,10 +46,12 @@ export default function ReachUsForm() {
       `🔹 Budget: ${yourBudget}%0A` +
       `🔹 Channel Link: ${yourChannelLink}%0A%0A` +
       `💬 Message: ${message}%0A%0A` +
-      `Best regards,%0A${name}%0A${email}`;
+      `Best regards,%0A${name}%0A${email}`
 
     // Open Gmail with pre-filled details
-    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${recipientEmail}&su=${encodeURIComponent(subject)}&body=${body}`);
+    window.open(
+      `https://mail.google.com/mail/?view=cm&fs=1&to=${recipientEmail}&su=${encodeURIComponent(subject)}&body=${body}`,
+    )
 
     // Reset form
     formRef.current!.reset();
@@ -57,9 +59,9 @@ export default function ReachUsForm() {
   };
 
   return (
-    <form 
-      className="space-y-[26px] w-full md:w-[676px] mx-auto" 
-      ref={formRef} 
+    <form
+      className="space-y-[26px] w-full md:w-[676px] mx-auto"
+      ref={formRef}
       onSubmit={handleSubmit}
     >
       {/* Form Fields */}
@@ -86,5 +88,5 @@ export default function ReachUsForm() {
         </button>
       </div>
     </form>
-  );
+  )
 }

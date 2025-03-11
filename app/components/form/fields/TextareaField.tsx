@@ -26,5 +26,5 @@ export default function TextareaField({
         className="w-full outline-none mt-1 focus:outline-brand-parrot focus:outline cursor-pointer bg-secondary-fill hover:bg-tertiary-fill  rounded-[20px] px-4 py-3 h-[118px]"
       />
     </div>
-  );
+  )
 }

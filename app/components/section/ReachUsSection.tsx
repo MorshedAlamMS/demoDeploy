@@ -1,5 +1,5 @@
-import ReachUsForm from "../form/ReachUsForm";
-import SectionHeading from "../shared/SectionHeading";
+import ReachUsForm from '../form/ReachUsForm'
+import SectionHeading from '../shared/SectionHeading'
 
 const ReachUsSection = () => {
   return (
@@ -16,7 +16,7 @@ const ReachUsSection = () => {
       {/* form */}
       <ReachUsForm />
     </div>
-  );
-};
+  )
+}
 
-export default ReachUsSection;
+export default ReachUsSection

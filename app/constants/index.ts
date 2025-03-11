@@ -1,3 +1,3 @@
-export * from "./clientsData"
-export * from "./processData"
-export * from "./MyStrategyData"
+export * from './clientsData'
+export * from './processData'
+export * from './MyStrategyData'

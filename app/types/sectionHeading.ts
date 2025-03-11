@@ -1,5 +1,5 @@
 export interface ISectionHeading {
-    title:string,
-    sectionName:string,
-    titleClass:string
+  title: string
+  sectionName: string
+  titleClass: string
 }

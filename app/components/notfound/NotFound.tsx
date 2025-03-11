@@ -190,7 +190,10 @@ export const NoContentAvailable = () => {
               d="M261.249 238.692H250.551V241.272H261.249V238.692Z"
               fill="#E0E0E0"
             />
-            <path d="M262.914 244.5H249.18V249.954H262.914V244.5Z" fill="white" />
+            <path
+              d="M262.914 244.5H249.18V249.954H262.914V244.5Z"
+              fill="white"
+            />
             <path
               d="M295.18 112.596L293.938 252.978H349.539V114.51L295.18 112.596Z"
               fill="#F5F5F5"
@@ -696,7 +699,9 @@ export const NoContentAvailable = () => {
             </clipPath>
           </defs>
         </svg>
-        <p className="text-quaternary-text text-[35px] leading-[150%] -treacking-[0.7px] capitalize font-figtree pt-[60px]">Oops! No data available..</p>
+        <p className="text-quaternary-text text-[35px] leading-[150%] -treacking-[0.7px] capitalize font-figtree pt-[60px]">
+          Oops! No data available..
+        </p>
       </div>
     </>
   )

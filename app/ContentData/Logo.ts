@@ -1,3 +1,1 @@
-
-
-export const logo = "logo.png"
+export const logo = 'logo.png'
