@@ -1,8 +1,8 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
 export interface IProcess {
-    icon:ReactNode,
-    title:string,
-    description:string,
-    titleClass:string
+  icon: ReactNode
+  title: string
+  description: string
+  titleClass: string
 }

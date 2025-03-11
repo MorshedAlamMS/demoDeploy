@@ -1,8 +1,8 @@
-import { nanoid } from "nanoid";
-import ClientWorkCard from "~/components/card/ClientWorkCard";
-import SectionHeading from "~/components/shared/SectionHeading";
-import { Marquee } from "~/components/ui/marquee";
-import { clientsWorkImages } from "~/ContentData";
+import { nanoid } from 'nanoid'
+import ClientWorkCard from '~/components/card/ClientWorkCard'
+import SectionHeading from '~/components/shared/SectionHeading'
+import { Marquee } from '~/components/ui/marquee'
+import { clientsWorkImages } from '~/ContentData'
 
 const Portfolio = () => {
   return (
@@ -17,7 +17,7 @@ const Portfolio = () => {
       <div className="lg:mt-[80px] mt-[50px]">
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
           <Marquee pauseOnHover className="[--duration:20s]">
-            {clientsWorkImages.map((imgName) => (
+            {clientsWorkImages.map(imgName => (
               <ClientWorkCard key={nanoid()} imgName={imgName} />
             ))}
           </Marquee>
@@ -26,7 +26,7 @@ const Portfolio = () => {
             pauseOnHover
             className="[--duration:20s] lg:mt-[60px] mt-1"
           >
-            {clientsWorkImages.map((imgName) => (
+            {clientsWorkImages.map(imgName => (
               <ClientWorkCard key={nanoid()} imgName={imgName} />
             ))}
           </Marquee>
@@ -35,7 +35,7 @@ const Portfolio = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Portfolio;
+export default Portfolio

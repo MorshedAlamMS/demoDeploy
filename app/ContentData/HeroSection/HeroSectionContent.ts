@@ -52,29 +52,29 @@ display correctly.
 
 export const heroSectionTitle =
   // * Banner Title (Update the text below to change your banner heading)
-  "The best way to showcase your work";
+  'The best way to showcase your work'
 
 export const heroSectionProfileImage =
   // * Banner Profile Image: File name located in /public/Banner/
   // * Here you can upload your profile image.
-  "bannerImage.png";
+  'bannerImage.png'
 
 export const feedBackPlatformImagesName =
   // * Feedback Images: Array of image file names located in /public/feedback/
   // * Images are displayed in the order provided in this array.
-  ["feedback1.png", "feedback2.png"];
+  ['feedback1.png', 'feedback2.png']
 
 export const feedBackPlatformName =
   // * Feedback Platforms: List the platforms where you received feedback.
   // * Ensure the names correspond correctly to the displayed feedback.
-  ["Fiverr", "Upwork"];
+  ['Fiverr', 'Upwork']
 
 export const feedBackStar =
   // * Feedback Star: Number of stars to display (e.g., 4.5)
   // * Ensure this is a number; the component displays full stars based on the integer part.
-  4.5;
+  4.5
 
 export const buttonsBgColor =
   // * Buttons Background Colors: Array with two colors for the buttons (Works and Contact)
   // * Ensure the array contains exactly two valid hexadecimal color values.
-  ["#000000", "#252B37"];
+  ['#000000', '#252B37']

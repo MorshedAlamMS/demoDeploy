@@ -3,9 +3,9 @@ const ClientCard = ({
   name,
   subscribers,
 }: {
-  imgName: string;
-  name: string;
-  subscribers: string;
+  imgName: string
+  name: string
+  subscribers: string
 }) => {
   return (
     <div className="lg:w-[200px] w-[100px] h-[122px] lg:h-[232px] flex flex-col items-center lg:mx-4 mx-1 lg:gap-[14px] gap-[6px] border-2 border-[rgba(0,0,0,0.10)] lg:rounded-[10px] rounded-md  bg-white lg:px-[14px] px-[7px] pt-[7px] pb-[6px] lg:pt-[14px] lg:pb-3">
@@ -32,6 +32,6 @@ const ClientCard = ({
         </p>
       </div>
     </div>
-  );
-};
-export default ClientCard;
+  )
+}
+export default ClientCard

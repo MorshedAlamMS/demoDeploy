@@ -3,13 +3,13 @@ export default function InputField({
   type,
   name,
   onChange,
-  value
+  value,
 }: {
-  label: string;
-  type: string;
-  name: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  value:string
+  label: string
+  type: string
+  name: string
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  value: string
 }) {
   return (
     <div className="flex flex-col w-full">
@@ -23,7 +23,7 @@ export default function InputField({
 
       {/* input */}
       <input
-        onChange={(e)=>onChange(e)}
+        onChange={e => onChange(e)}
         id={name}
         type={type}
         defaultValue={value}
@@ -31,5 +31,5 @@ export default function InputField({
         className="w-full focus:outline mt-1 focus:outline-brand-parrot cursor-pointer outline-none bg-secondary-fill hover:bg-tertiary-fill rounded-[20px] px-4 py-3 h-[52px]"
       />
     </div>
-  );
+  )
 }

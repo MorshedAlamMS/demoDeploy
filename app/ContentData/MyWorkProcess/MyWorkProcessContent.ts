@@ -36,60 +36,59 @@ Happy customizing!
 // Work Process Steps Configuration
 // --- You can replace the steps and descriptions below with your own content.
 export const myWorkProcess = [
-    // Step 1
-    {
-        processTitle: 
-        // 🔄 Keep the title short and relevant (e.g., 2 words). Example: "Say Hello"
-        "Say Hello",
+  // Step 1
+  {
+    processTitle:
+      // 🔄 Keep the title short and relevant (e.g., 2 words). Example: "Say Hello"
+      'Say Hello',
 
-        processDescription: 
-        // 💡 Clearly explain the step in one concise sentence.
-        "You reach out to me via email with your request."
-    },
-    // Step 2
-    {
-        processTitle: 
-        // 🔄 Use an informative and engaging title. Example: "We Discuss Your Project"
-        "We Discuss Your Project",
+    processDescription:
+      // 💡 Clearly explain the step in one concise sentence.
+      'You reach out to me via email with your request.',
+  },
+  // Step 2
+  {
+    processTitle:
+      // 🔄 Use an informative and engaging title. Example: "We Discuss Your Project"
+      'We Discuss Your Project',
 
-        processDescription: 
-        // 💡 Briefly describe what happens during this step.
-        "We discuss your video topic, style, pricing, and turnaround time."
-    },
-    // Step 3
-    {
-        processTitle: 
-        // 🔄 Keep it simple and direct. Example: "You Send Payment"
-        "You Send Payment",
+    processDescription:
+      // 💡 Briefly describe what happens during this step.
+      'We discuss your video topic, style, pricing, and turnaround time.',
+  },
+  // Step 3
+  {
+    processTitle:
+      // 🔄 Keep it simple and direct. Example: "You Send Payment"
+      'You Send Payment',
 
-        processDescription: 
-        // 💡 Describe the payment process clearly and succinctly.
-        "Once we finalize the details, you send the payment to kick off the work."
-    },
-    // Step 4
-    {
-        processTitle: 
-        // 🔄 Use action-oriented words. Example: "We Start Designing"
-        "We Start Designing",
+    processDescription:
+      // 💡 Describe the payment process clearly and succinctly.
+      'Once we finalize the details, you send the payment to kick off the work.',
+  },
+  // Step 4
+  {
+    processTitle:
+      // 🔄 Use action-oriented words. Example: "We Start Designing"
+      'We Start Designing',
 
-        processDescription: 
-        // 💡 Explain the design process in one impactful sentence.
-        "I design a scroll-stopping, high-CTR thumbnail based on our discussion."
-    },
-    // Step 5
-    {
-        processTitle: 
-        // 🔄 Make the title reflect the purpose. Example: "Revision if Needed"
-        "Revision if Needed",
+    processDescription:
+      // 💡 Explain the design process in one impactful sentence.
+      'I design a scroll-stopping, high-CTR thumbnail based on our discussion.',
+  },
+  // Step 5
+  {
+    processTitle:
+      // 🔄 Make the title reflect the purpose. Example: "Revision if Needed"
+      'Revision if Needed',
 
-        processDescription: 
-        // 💡 Mention that adjustments can be made if required.
-        "If you want any tweaks, I make adjustments to ensure it’s perfect."
-    },
-];
+    processDescription:
+      // 💡 Mention that adjustments can be made if required.
+      'If you want any tweaks, I make adjustments to ensure it’s perfect.',
+  },
+]
 
 // My Email Configuration
 // --- You can replace the email address below with your own.
 // ⚠️ Make sure the email address is valid and reachable.
-export const myEmail = 
-"example@gmail.com";
+export const myEmail = 'example@gmail.com'

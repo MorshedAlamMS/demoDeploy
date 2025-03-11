@@ -87,49 +87,47 @@ Please remember that the order of names, images, and reviews is critical. Each n
 
 ==================================================================== */
 
-
 export const clientNames = [
-    "YT orbit",
-    "ZHC",
-    "Ease media",
-    "Muskonomy",
-    "Ayan Ghosh | Video Editor",
-    "James Charles",
-    "Shawn Herrin",
-    "Saima",
-    "Justin Pugh",
-    "Blue Thunder",
-    "ZHC Crafts",
-    "Kamahley"
-];
-
+  'YT orbit',
+  'ZHC',
+  'Ease media',
+  'Muskonomy',
+  'Ayan Ghosh | Video Editor',
+  'James Charles',
+  'Shawn Herrin',
+  'Saima',
+  'Justin Pugh',
+  'Blue Thunder',
+  'ZHC Crafts',
+  'Kamahley',
+]
 
 export const clientImages = [
-    "ytorbit.png",
-    "zhc.png",
-    "ease.png",
-    "muskonomy.png",
-    "ayan.png",
-    "james.png",
-    "shawn.png",
-    "saima.png",
-    "justinpugh.png",
-    "blueThunder.png",
-    "zhcCrafts.png",
-    "kamahley.png"
-];
+  'ytorbit.png',
+  'zhc.png',
+  'ease.png',
+  'muskonomy.png',
+  'ayan.png',
+  'james.png',
+  'shawn.png',
+  'saima.png',
+  'justinpugh.png',
+  'blueThunder.png',
+  'zhcCrafts.png',
+  'kamahley.png',
+]
 
 export const reviewsOfClient = [
-    "Sup 🔥",
-    "Great guy, even better thumbnails.",
-    "This is some good work",
-    "Let's keep up the great work.Your communication and design skills are excellent. I'm hoping for a long-term collaboration here.",
-    "You cooked 🔥",
-    "I’m great!!! I came across your thumbnail work, you’re amazing!",
-    "Bottom right. No idea why, the contrast grabs my eye. When I expanded the image they were all so good. But at small size the white shirt got me.",
-    "Awesome, after seeing this Jimmy would be motivated to go the gym",
-    "Super easy to work with and crazy talented. Thumbnail BOSS always takes our ideas and levels them up!",
-    "Brilliant thumbnail designer—his work is clean, impactful, and optimized for maximum engagement!",
-    "Fast, reliable, and always on point! ",
-    "Extremely communicative and always focused on making the best possible design."
-];
+  'Sup 🔥',
+  'Great guy, even better thumbnails.',
+  'This is some good work',
+  "Let's keep up the great work.Your communication and design skills are excellent. I'm hoping for a long-term collaboration here.",
+  'You cooked 🔥',
+  'I’m great!!! I came across your thumbnail work, you’re amazing!',
+  'Bottom right. No idea why, the contrast grabs my eye. When I expanded the image they were all so good. But at small size the white shirt got me.',
+  'Awesome, after seeing this Jimmy would be motivated to go the gym',
+  'Super easy to work with and crazy talented. Thumbnail BOSS always takes our ideas and levels them up!',
+  'Brilliant thumbnail designer—his work is clean, impactful, and optimized for maximum engagement!',
+  'Fast, reliable, and always on point! ',
+  'Extremely communicative and always focused on making the best possible design.',
+]

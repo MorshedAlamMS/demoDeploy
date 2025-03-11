@@ -15,17 +15,17 @@
 
 export const name =
   // * Change the name to your own name.
-  "John Doe";
+  'John Doe'
 
 export const introPartOne =
   // * Change the text to your own introduction part one.
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed urna. Mauris vitae. Nulla.";
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed urna. Mauris vitae. Nulla.'
 
 export const introPartTwo =
   // * Change the text to your own introduction part two.
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Integer non libero. Donec.";
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Integer non libero. Donec.'
 
 export const imageName =
   // * Change the image name to your own image.
   // * Ensure the image is square and that the file name matches the variable value.
-  "aboutme.png";
+  'aboutme.png'

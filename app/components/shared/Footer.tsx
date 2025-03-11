@@ -1,9 +1,9 @@
-import { nanoid } from "nanoid";
-import FooterLogo from "../svg/socialIcons/FooterLogo";
-import { ScrollToSection } from "../ui-action/ScrollToSection";
-import { socialLinks } from "~/ContentData";
-import { socialIcons } from "~/constants/SocialIcons";
-import { websiteName } from "~/ContentData/WebsiteContent";
+import { nanoid } from 'nanoid'
+import FooterLogo from '../svg/socialIcons/FooterLogo'
+import { ScrollToSection } from '../ui-action/ScrollToSection'
+import { socialLinks } from '~/ContentData'
+import { socialIcons } from '~/constants/SocialIcons'
+import { websiteName } from '~/ContentData/WebsiteContent'
 
 const Footer = () => {
   return (
@@ -12,23 +12,23 @@ const Footer = () => {
       <FooterLogo />
       {/* route */}
       <div className="flex items-center lg:gap-[50px] gap-[30px]">
-        <button onClick={() => ScrollToSection("home")} className={buttonClass}>
+        <button onClick={() => ScrollToSection('home')} className={buttonClass}>
           Home
         </button>
         <button
-          onClick={() => ScrollToSection("works")}
+          onClick={() => ScrollToSection('works')}
           className={buttonClass}
         >
           Portfolio
         </button>
         <button
-          onClick={() => ScrollToSection("about")}
+          onClick={() => ScrollToSection('about')}
           className={buttonClass}
         >
           About me
         </button>
         <button
-          onClick={() => ScrollToSection("contact")}
+          onClick={() => ScrollToSection('contact')}
           className={buttonClass}
         >
           Contact
@@ -36,7 +36,7 @@ const Footer = () => {
       </div>
       {/* Social liks */}
       <div className="flex items-center gap-[18px]">
-        {socialLinks.map((social) => (
+        {socialLinks.map(social => (
           <a
             key={nanoid()}
             href={social.href}
@@ -54,10 +54,10 @@ const Footer = () => {
         All rights reserved by {websiteName}
       </p>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
 
 // this is button class
-const buttonClass = "font-bricolage font-medium text-sm text-secondary-text";
+const buttonClass = 'font-bricolage font-medium text-sm text-secondary-text'
