@@ -1,10 +1,12 @@
 import { Link, useLocation, useNavigate } from "@remix-run/react";
-import DiscordSvg from "../svg/footer/DiscordSvg";
-import FooterLogo from "../svg/footer/FooterLogo";
-import InstagramSvg from "../svg/footer/InstagramSvg";
-import PinterestSvg from "../svg/footer/PinterestSvg";
-import TwiteerSvg from "../svg/footer/TwiteerSvg";
+import DiscordSvg from "../svg/socialIcons/DiscordSvg";
+import FooterLogo from "../svg/socialIcons/FooterLogo";
+import InstagramSvg from "../svg/socialIcons/InstagramSvg";
+import PinterestSvg from "../svg/socialIcons/PinterestSvg";
+import TwiteerSvg from "../svg/socialIcons/TwiteerSvg";
 import { ScrollToSection } from "../ui-action/ScrollToSection";
+import { socialLinks } from "~/ContentData";
+import { socialIcons } from "~/constants/SocialIcons";
 
 
 
@@ -32,18 +34,11 @@ const Footer = () => {
             </div>
             {/* Social liks */}
             <div className="flex items-center gap-[18px]">
-                <a href="https://x.com/ThumbnailBoss" target="_blank" rel="noopener noreferrer">
-                    <TwiteerSvg />
-                </a>
-                <a href="https://www.pinterest.com/thumbnail_boss" target="_blank" rel="noopener noreferrer">
-                    <PinterestSvg />
-                </a>
-                <a href="https://www.instagram.com/thethumbnailboss" target="_blank" rel="noopener noreferrer">
-                    <InstagramSvg />
-                </a>
-                <a href="https://discord.com/invite/HRRA4YhE" target="_blank" rel="noopener noreferrer">
-                    <DiscordSvg />
-                </a>
+                {socialLinks.map((social, index) => (
+                    <a key={index} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.name}>
+                        {socialIcons[social.name]}
+                    </a>
+                ))}
             </div>
 
             {/* copyright text */}
