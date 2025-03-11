@@ -1,7 +1,7 @@
 import {
-  bannerTitle,
-  bannerProfileImage,
-  feedBackImagesName,
+  heroSectionTitle,
+  heroSectionProfileImage,
+  feedBackPlatformImagesName,
   feedBackPlatformName,
   feedBackStar,
   buttonsBgColor,
@@ -15,15 +15,12 @@ import { nanoid } from "nanoid";
 const BannerSection = () => {
   // Error handling: Ensure bannerTitle is a valid string
   const validTitle =
-    typeof bannerTitle === "string" && bannerTitle.trim().length > 0
-      ? bannerTitle
+    typeof heroSectionTitle === "string" && heroSectionTitle.trim().length > 0
+      ? heroSectionTitle
       : "Your awesome title goes here";
   const words = validTitle.split(" ");
 
-  if (words.length === 0) {
-    console.error("Banner title is empty. Please update the content file.");
-    return null;
-  }
+  if (words.length === 0) return null;
 
   // Always extract the last word for special styling
   const lastWord = words[words.length - 1];
@@ -56,7 +53,7 @@ const BannerSection = () => {
         <div className="lg:w-[200px] lg:h-[240px] w-[140px] h-[168px] pb-10 lg:mt-0 md:mt-[80px] mt-[50px]">
           <img
             className="w-full lg:h-[240px] h-[168px] object-contain"
-            src={`/Banner/${bannerProfileImage}`}
+            src={`/Banner/${heroSectionProfileImage}`}
             alt="Avatar"
           />
         </div>
@@ -93,10 +90,13 @@ const BannerSection = () => {
         {/* Feedback Section */}
         <div className="max-w-[206px] flex items-center gap-[9px] pt-10">
           <div className="flex items-center">
-            <img src={`/feedback/${feedBackImagesName[0]}`} alt="Feedback" />
+            <img
+              src={`/feedback/${feedBackPlatformImagesName[0]}`}
+              alt="Feedback"
+            />
             <img
               className="ml-[-5px] z-10"
-              src={`/feedback/${feedBackImagesName[1]}`}
+              src={`/feedback/${feedBackPlatformImagesName[1]}`}
               alt="Feedback"
             />
           </div>
