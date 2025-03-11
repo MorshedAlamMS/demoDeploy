@@ -6,7 +6,7 @@ import PaymentSvg from '~/components/svg/process/PaymentSvg'
 import RevisionSvg from '~/components/svg/process/RevisionSvg'
 
 // Importing the work process data from the content configuration file
-import { myWorkProcess } from '~/ContentData'
+import { myWorkProcessStepsDescription, myWorkProcessStepsTitle } from '~/ContentData'
 // Importing the IProcess type for type safety and consistency
 import { IProcess } from '~/types'
 
@@ -32,13 +32,13 @@ const titleClass = [
 
 // Mapping the work process data to create the final process data array
 // 📝 The `processData` array will contain objects with icon, title, description, and titleClass properties
-export const processData: IProcess[] = myWorkProcess.map((process, index) => ({
+export const processData: IProcess[] = myWorkProcessStepsTitle.map((process, index) => ({
   // Assigning the icon from the icons array based on the index
   icon: icons[index],
   // Assigning the title from the imported work process data
-  title: process.processTitle,
+  title: process,
   // Assigning the description from the imported work process data
-  description: process.processDescription,
+  description: myWorkProcessStepsDescription[index],
   // Assigning the CSS class for the title based on the index
   titleClass: titleClass[index],
 }))

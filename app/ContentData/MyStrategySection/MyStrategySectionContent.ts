@@ -20,32 +20,42 @@ Happy customizing!
 
 export const myStrategySectionTopDescription =
   // strategy section Description text ---You can replace your own description that relevant to your Strategy here
-  'Don’t Let Bad Thumbnails Hold You Back! Every creator wants more views, more engagement, more growth but the harsh truth? Great content alone isn’t enough.'
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 
 // Strategy Section Step Titles
 // --- These titles represent each step of the strategy section.
 // --- Ensure that the order of the titles matches the order of the images and card colors.
 export const myStrategySectionStepTitle = [
-  'If people don’t click, they’ll never watch.',
-  'If your thumbnail blends in, your video disappears.',
-  'If your title doesn’t spark curiosity, they scroll past.',
+  'Lorem ipsum dolor sit amet, consectetur',//step -01
+  'Sed do eiusmod tempor incididunt ut labore.',// step -02
+  'Tempor incididunt ut labore et dolore magna aliqua.', // step -03
 ]
 
 // Strategy Section Step Images
 // --- These images correspond to each step and must be synchronized with step titles and card colors.
 // --- Before using an image, ensure it is imported into the `/public/MyStrategySectionImages` folder.
 // --- Use the exact image name; otherwise, the image will not appear in the UI.
-export const myStrategySectionImages = ['step1.png', 'step2.png', 'step3.png']
+export const myStrategySectionImages = 
+[
+  'step1.png',//step -01
+  'step2.png',//step -02
+  'step3.png'//step -03
+]
 
 // Card Color Customization
 // --- These colors correspond to each step and must be in the same order as step titles and images.
 // --- Replace the hex color codes below with your preferred colors while maintaining synchronization.
-export const stepCardColor = ['#FEE690', '#D5C9EE', '#D4E2A7']
+export const stepCardColor = 
+[
+  '#FEE690', // step 01 card color
+  '#D5C9EE', // step 02 card color
+  '#D4E2A7' // step 03 card color
+]
 
 export const myStrategySectionBottomDescription =
   // Your strategy section bottom description text ---You can replace your description !!!
-  'Big creators invest in their thumbnails because they know the first impression makes or breaks a video. You’ve put in the effort—don’t let a bad thumbnail cost you thousands of views.'
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Fusce ac orci non nisi vehicula fringilla.'
 
 export const myStrategySectionBottomTitle =
   // Your strategy section bottom title text ---You can replace your title that will attract your client
-  '⏳ Get a high-performing thumbnail today before your competition beats you to it!'
+  '⏳ Don’t miss out—grab a high-converting thumbnail now before your competition takes the lead!'

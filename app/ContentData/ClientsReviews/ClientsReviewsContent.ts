@@ -14,7 +14,7 @@ You can customize these arrays to display different client reviews on your websi
 
 - **DO NOT** modify the structure of the arrays (e.g., adding or removing commas or brackets). 
 
-- **DO NOT** change the order of the data between the arrays. The three arrays (`reviewClientNames`, `reviewerClientImages`, and `reviewsOfClient`) MUST match the order for the reviews to display correctly. Each element in the `reviewClientNames`, `reviewerClientImages`, and `reviewsOfClient` arrays corresponds to the same index in the   other two arrays.
+- **DO NOT** change the order of the data between the arrays. The three arrays (`reviewClientNames`, `reviewerClientImages`, and `reviewsOfClient`) MUST match the order for the reviews to display correctly. Each element in the `reviewClientNames`, `reviewerClientImages`, and `reviewsOfClient` arrays corresponds to the same index in the other two arrays.
 
 - Only **edit the content** inside the arrays (i.e., change text or image paths) while keeping the structure intact.
 
@@ -27,8 +27,6 @@ You can customize these arrays to display different client reviews on your websi
 - The file names of the images in the `reviewerClientImages` array **must match exactly** with the image file names you put in the `public/ClientReviewImages` folder.
 
   - **Case sensitivity matters!** If the name in the array is `"ytorbit.png"`, the image in the `public/ClientReviewImages` folder must also be named `"ytorbit.png"`. Even a slight difference in upper or lower case letters will cause the image to **not display**.
-
-- For example, `"ytOrbit.png"` or `"YtOrbit.png"` will not work if the file in the folder is `"ytorbit.png"`.
 
 - If the image path or name is incorrect, the image **will not appear**, and this can break the look of your page.
 
@@ -58,76 +56,52 @@ By following this structure, you can easily add, remove, or edit client reviews.
 
 Please remember that the order of names, images, and reviews is critical. Each name in `reviewClientNames` should have a corresponding image in `reviewerClientImages` and review in `reviewsOfClient` in the same order.
 
-📌 **Example of Editing a Review:**
-
-export const reviewClientNames = [
-    "YT orbit",                  // Client's name
-    "New Client",                 // Add new name here
-    "Ease media",
-    // continue with other names...
-];
-
-export const reviewerClientImages = [
-    "ytorbit.png",               // Image file for "YT orbit"
-    "newclient.png",             // Add the corresponding image file here
-    "ease.png",
-    // continue with other images...
-];
-
-export const reviewsOfClient = [
-    "Sup 🔥",                    // Review for "YT orbit"
-    "This new client is amazing!", // Add review for "New Client"
-    "This is some good work",
-    // continue with other reviews...
-];
-
-By following this structure, you can easily add, remove, or edit client reviews.
-
-Please remember that the order of names, images, and reviews is critical. Each name in reviewClientNames should have a corresponding image in reviewerClientImages and review in reviewsOfClient in the same order.
-
 ==================================================================== */
 
+// Demo client names. Replace with actual client names.
 export const clientNames = [
-  'YT orbit',
-  'ZHC',
-  'Ease media',
-  'Muskonomy',
-  'Ayan Ghosh | Video Editor',
-  'James Charles',
-  'Shawn Herrin',
-  'Saima',
-  'Justin Pugh',
-  'Blue Thunder',
-  'ZHC Crafts',
-  'Kamahley',
-]
+  'PixelWorks Studio',
+  'Creative Hive',
+  'NextGen Media',
+  'Digital Spark',
+  'Clara | Content Creator',
+  'Eliott Harper',
+  'Ryan Stevens',
+  'Nina Patel',
+  'Alex Monroe',
+  'Bright Horizon',
+  'Crafted Visuals',
+  'Visionary Media',
+];
 
+// Demo client images. Replace with actual image file names.
 export const clientImages = [
-  'ytorbit.png',
-  'zhc.png',
-  'ease.png',
-  'muskonomy.png',
-  'ayan.png',
-  'james.png',
-  'shawn.png',
-  'saima.png',
-  'justinpugh.png',
-  'blueThunder.png',
-  'zhcCrafts.png',
-  'kamahley.png',
-]
+  'client1.png',
+  'client2.png',
+  'client3.png',
+  'client4.png',
+  'client5.png',
+  'client6.png',
+  'client7.png',
+  'client8.png',
+  'client9.png',
+  'client10.png',
+  'client11.png',
+  'client12.png',
+];
 
+// Demo client reviews. Replace with actual client reviews.
 export const reviewsOfClient = [
-  'Sup 🔥',
-  'Great guy, even better thumbnails.',
-  'This is some good work',
-  "Let's keep up the great work.Your communication and design skills are excellent. I'm hoping for a long-term collaboration here.",
-  'You cooked 🔥',
-  'I’m great!!! I came across your thumbnail work, you’re amazing!',
-  'Bottom right. No idea why, the contrast grabs my eye. When I expanded the image they were all so good. But at small size the white shirt got me.',
-  'Awesome, after seeing this Jimmy would be motivated to go the gym',
-  'Super easy to work with and crazy talented. Thumbnail BOSS always takes our ideas and levels them up!',
-  'Brilliant thumbnail designer—his work is clean, impactful, and optimized for maximum engagement!',
-  'Fast, reliable, and always on point! ',
-  'Extremely communicative and always focused on making the best possible design.',
-]
+  'Exceptional work—truly brought my vision to life!',
+  'Highly professional and delivers beyond expectations.',
+  'Amazing creativity and attention to detail.',
+  'Really impressive designs! The team loved the outcome.',
+  'Perfect execution! Nailed the concept on the first try.',
+  'Fast turnaround and top-notch quality—couldn’t ask for more!',
+  'Incredibly talented and always delivers on time.',
+  'The visuals are striking and effective—highly recommend!',
+  'Superb communication and flawless design. Definitely working together again!',
+  'Outstanding craftsmanship—elevated our project to a new level.',
+  'Versatile, innovative, and reliable every single time!',
+  'A real game-changer for our branding and presentation.',
+];
