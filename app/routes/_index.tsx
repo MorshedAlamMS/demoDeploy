@@ -1,10 +1,11 @@
-import { Outlet, useLocation, useNavigation } from '@remix-run/react'
+import { useLocation, useNavigation } from '@remix-run/react'
 import { useEffect } from 'react'
 import Footer from '~/components/shared/Footer'
 import { Loading } from '~/components/shared/loading/Loading'
 import Navbar from '~/components/shared/navbar/Navbar'
+import Home from '~/page/home/Home'
 
-export default function HomeLayout() {
+export default function Index() {
   const location = useLocation()
   const navigation = useNavigation()
 
@@ -33,7 +34,7 @@ export default function HomeLayout() {
             <Loading />
           </div>
         ) : null}
-        {!showSpinner ? <Outlet /> : null}
+        {!showSpinner ? <Home /> : null}
       </main>
       <Footer />
     </>
